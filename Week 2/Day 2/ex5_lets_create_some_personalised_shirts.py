@@ -9,3 +9,15 @@ def make_shirt(shirt_size, shirt_message):
 
 
 make_shirt(shirt_size, shirt_message)
+
+
+def default_shirt(size):
+    if size == "L":
+        print("babas")
+    elif size == "M":
+        print("sdhhd")
+    else:
+        print("sdjklsjldk")
+
+
+make_shirt(size="M")
