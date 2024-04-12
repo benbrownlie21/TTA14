@@ -65,8 +65,7 @@ def checkWin():
 
 
 print("Welcome to TIC-TAC-TOE! By Ben Brownlie")
-print("\n\nPlayer 1 [X] --- Player 2 [O]")
-# print("Please wait...")
+print("\nPlayer 1 [X] --- Player 2 [O]")
 time.sleep(1.5)
 
 while Game == Running:
