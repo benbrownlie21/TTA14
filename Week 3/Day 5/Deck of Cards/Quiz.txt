@@ -1,0 +1,25 @@
+What is a class?
+Classes are used to create new user-defined data structures that contain arbitrary information about something.
+
+What is an instance?
+nstance methods are defined inside a class and are used to describe a function that belongs to a class.
+
+What is encapsulation?
+We can restrict access to methods and variables. This prevents data from direct modification, which is called Encapsulation.
+
+What is abstraction?
+Abstraction is a fundamental concept in Python programming that allows us to simplify complex concepts and focus on the essential details. It involves hiding 
+unnecessary details and exposing only the relevant information to the users.
+
+What is inheritance?
+Inheritance is the process by which one class takes on the attributes and methods of another.
+
+What is multiple inheritance?
+A class can inherit from two different classes; in this case, the order of the parent class in a class definition will decide what will be inherited. The first parent class will prioritize 
+classes below (meaning the functions last to be inherited can override functions from the parent class).
+
+What is polymorphism?
+Polymorphism means different or related classes that use the same names for their functions. Polymorphism allows the ability to use a standard interface for multiple forms or data types.
+
+What is method resolution order or MRO?
+Method Resolution Order(MRO) it denotes the way a programming language resolves a method or attribute.
