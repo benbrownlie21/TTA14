@@ -1,42 +1,26 @@
 from game import Game
 
-results = {}
-
 
 def get_user_menu_choice():
-    while True:
-        print("--------MENU--------\nPlay New Game (g)\nShow Scores (s)\nQuit (x)")
-        user_input = input("Please choose using (g, s, x): ")
-        if user_input == "g":
-            main()
-        elif user_input == "s":
-            print_results(results)
-        elif user_input == "x":
-            break
-        else:
-            print("Please input either g, s, or q")
+    users_choice = input("'g' for play a new game \n 'x' for show scores and exit ")
+    return users_choice
 
 
 def print_results(results):
-    game = Game()
-    game_result = game.get_game_result()
-    if game_result == "You Win!":
-        results["Win"] = results.get("Win", 0) + 1
-    elif game_result == "Computer Wins!":
-        results["Loss"] = results.get("Loss", 0) + 1
-    else:
-        results["Draw"] = results.get("Draw", 0) + 1
-    print(results)
+    for k, v in results.items():
+        print(f"You {k} {v} times!")
+    print("Thank you for playing")
 
 
 def main():
-    game = Game()
-    game.get_user_item()
-    game.get_computer_choice()
-    game.result_types()
-    game_result = game.get_game_result()
-    print(game_result)
-    return game_result
+    users_choice = get_user_menu_choice()
+    results = {"won": 0, "loss": 0, "draw": 0}
+    while users_choice != "x":
+        new_game = Game()
+        results[new_game.play()] += 1
+        users_choice = get_user_menu_choice()
+    print_results(results)
 
 
-get_user_menu_choice()
+if __name__ == "__main__":
+    main()
